@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tasks</title>
+    <style>
+        /* Styles for the numbers 1-10 with different colors */
+        .colored-numbers span {
+            display: block;
+            font-size: 20px;
+        }
+        .colored-numbers span:nth-child(1) { color: red; }
+        .colored-numbers span:nth-child(2) { color: blue; }
+        .colored-numbers span:nth-child(3) { color: green; }
+        .colored-numbers span:nth-child(4) { color: orange; }
+        .colored-numbers span:nth-child(5) { color: purple; }
+        .colored-numbers span:nth-child(6) { color: brown; }
+        .colored-numbers span:nth-child(7) { color: pink; }
+        .colored-numbers span:nth-child(8) { color: gray; }
+        .colored-numbers span:nth-child(9) { color: teal; }
+        .colored-numbers span:nth-child(10) { color: black; }
+        
+        /* Styles for addresses */
+        .address {
+            display: inline-block;
+            width: 40%;
+            vertical-align: top;
+        }
+        .receiver {
+            text-align: center;
+        }
+
+        /* Styling for the table of stock prices */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+        td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 5(A):</h1>
+    <h2 id="top">Top of the Page</h2>
+    <a href="#bottom">Jump to Bottom</a>
+
+
+    <h1>Task 1:</h1>
+    <h2>Numbers 1-10 with Different Colors</h2>
+    <div class="colored-numbers">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+    </div>
+
+    <h1>Task 2:</h1>
+    <h2>Squares of Numbers 1-10</h2>
+    <div>
+        <p>1<sup>2</sup> = 1</p>
+        <p>2<sup>2</sup> = 4</p>
+        <p>3<sup>2</sup> = 9</p>
+        <p>4<sup>2</sup> = 16</p>
+        <p>5<sup>2</sup> = 25</p>
+        <p>6<sup>2</sup> = 36</p>
+        <p>7<sup>2</sup> = 49</p>
+        <p>8<sup>2</sup> = 64</p>
+        <p>9<sup>2</sup> = 81</p>
+        <p>10<sup>2</sup> = 100</p>
+    </div>
+
+    <h1>Task 3:</h1>
+    <h2>Ordered and Unordered Lists</h2>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+
+    <h1>Task 4:</h1>
+    <h2>Addresses</h2>
+    <div class="address sender">
+        <p>Sheikh Ali Akbar</p>
+        <p>1234 Anim Street</p>
+        <p>P.O. Box 22222</p>
+    </div>
+    <div class="address receiver">
+        <p>AB Bishal</p>
+        <p>5555 Street Avenue</p>
+        <p>Metropolitan, Metropolis 11111</p>
+    </div>
+
+
+
+
+    <h1>Task 6:</h1>
+    <h2>Links to Different Websites</h2>
+    <a href="https://www.google.com" target="_blank">Google</a><br>
+    <a href="https://www.youtube.com" target="_blank">YouTube</a><br>
+    <a href="https://www.github.com" target="_blank">GitHub</a><br>
+    <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+
+    <h1>Task 7:</h1>
+    <h2>Images with Titles</h2>
+    <h3>Image 1</h3>
+    <img src="https://picsum.photos/200/200?random=1" alt="Image 1" width="200" height="200" title="Image 1"><br><br>
+    <h3>Image 2</h3>
+    <img src="https://picsum.photos/200/200?random=2" alt="Image 2" width="200" height="200"><br><br>
+    <h3>Image 3</h3>
+    <img src="https://picsum.photos/200/200?random=3" alt="Image 3" width="200" height="200"><br><br>
+    <h3>Image 4</h3>
+    <img src="https://picsum.photos/200/200?random=4" alt="Image 4" width="200" height="200"><br><br>
+    <h3>Image 5</h3>
+    <img src="https://picsum.photos/200/200?random=5" alt="Image 5" width="200" height="200">
+
+    <h1>Task 8:</h1>
+    <h2>Image with Border</h2>
+    <img src="https://picsum.photos/200/200?random=6" alt="Image with Border" width="200" height="200" style="border: 2px solid black;">
+
+    <h1>Task 9:</h1>
+    <h2>Image Linking to Itself</h2>
+    <a href="https://picsum.photos/200/200?random=7"><img src="https://picsum.photos/200/200?random=7" alt="Image 7" width="200" height="200"></a>
+
+    <h1>Task 10:</h1>
+    <h2>Image Linking to a Search Engine</h2>
+    <a href="https://www.google.com" target="_blank"><img src="https://picsum.photos/200/200?random=8" alt="Image 8" width="200" height="200"></a>
+
+    <h1>Task 11:</h1>
+    <h2>Corporations Stock Prices</h2>
+    <table>
+        <tr>
+            <th>Company Name</th>
+            <th>Symbol</th>
+            <th>Last Price</th>
+            <th>52wk High</th>
+            <th>52wk Low</th>
+            <th>PE Ratio</th>
+        </tr>
+        <tr>
+            <td>Apple Inc.</td>
+            <td>AAPL</td>
+            <td>227.37</td>
+            <td>237.23</td>
+            <td>164.08</td>
+            <td>34.62</td>
+        </tr>
+        <tr>
+            <td>Microsoft</td>
+            <td>MSFT</td>
+            <td>429.17</td>
+            <td>468.35</td>
+            <td>309.45</td>
+            <td>36.37</td>
+        </tr>
+        <tr>
+            <td>Amazon</td>
+            <td>AMZN</td>
+            <td>193.96</td>
+            <td>201.20</td>
+            <td>118.35</td>
+            <td>46.47</td>
+        </tr>
+        <tr>
+            <td>Nvidia Corp</td>
+            <td>NVDA</td>
+            <td>120.87</td>
+            <td>140.76</td>
+            <td>39.23</td>
+            <td>56.77</td>
+        </tr>
+        <tr>
+            <td>Meta Platforms Inc</td>
+            <td>META</td>
+            <td>563.33</td>
+            <td>573.98</td>
+            <td>279.40</td>
+            <td>28.81</td>
+        </tr>
+    </table>
+
+    <h1>Task 5(B):</h1>
+    <h2 id="bottom">Bottom of the Page</h2>
+    <a href="#top">Jump to Top</a>
+</body>
+</html>
